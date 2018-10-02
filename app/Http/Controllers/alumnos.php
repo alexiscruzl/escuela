@@ -8,7 +8,7 @@ class alumnos extends Controller
 {
     public function index()
     {
-      if(request()->has('empty'))
+      /*if(request()->has('empty'))
       {
         $users =[];
       }else{
@@ -18,14 +18,14 @@ class alumnos extends Controller
         'alexis',
         'roberto',
       ];
-      }
+      }*/
       
-     return  view('primer-page')
+     return  view('alumnos.alumnosIndex');
       // 'users' => $users,
        //'title' => 'listado de usuarios'
     // ]);
-       ->with('users',$users)
-       ->with('title','listado de otro usuario');
+       //->with('users',$users)
+       //->with('title','listado de otro usuario');
     }
   public function show($id)
   {
@@ -33,6 +33,6 @@ class alumnos extends Controller
   }
   public function create()
   {
-    return "creacion de nuevo usuario";
+    return view("alumnos.alumnosForm");
   }
 }
